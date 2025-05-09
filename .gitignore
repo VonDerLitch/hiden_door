@@ -1,0 +1,5 @@
+# Arquivos maiores que 10mb
+/data/PDFS RPG/
+*.tmp
+*.temp
+*.crdownload
