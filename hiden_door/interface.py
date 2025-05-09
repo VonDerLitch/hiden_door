@@ -1,5 +1,5 @@
 from services.books import Books
-
+from services.dice import Dice
 def exibir_menu():
     print("Bem-vindo! Escolha uma das opções abaixo:")
     print("1. Livros")
@@ -39,9 +39,24 @@ def opcao_livros():
         print("Opção inválida.")
 
 def opcao_rolar_dados():
-    print("Você escolheu a opção 'Rolar Dados'.")
-    # Adicione aqui a lógica para rolar dados
+    while True:
+        print("Você escolheu a opção 'Rolar Dados'.")
+        print("1. Criar características.")
+        print("2. Jogar um D20.")
+        print("0. Voltar")
+        escolha = input("Digite o número da sua escolha: ")
 
+        if escolha == "1":
+            Dice.criar_caracteristicas()
+        elif escolha == "2":
+            Dice.jogar_d20()
+        elif escolha == "0":
+            break
+        else:
+            print("Opção inválida.")
+            input("Pressione qualquer tecla para continuar.")
+
+       
 def opcao_lista_de_magias():
     print("Você escolheu a opção 'Lista de Magias'.")
     # Adicione aqui a lógica para a lista de magias
